@@ -12,7 +12,8 @@ public class EqualSumChecker {
     }
 
 //    public static void main(String[] args) {
-//        hasEqualSum(1, -1, 0);
+//        boolean hasPrint = hasEqualSum(1, 1, 1);
+//        System.out.println(hasPrint);
 //    }
 }
 

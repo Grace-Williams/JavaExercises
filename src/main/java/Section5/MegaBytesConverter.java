@@ -15,7 +15,7 @@ public class MegaBytesConverter {
             System.out.println(XX + " KB = " + YY + " MB and " + ZZ + " KB");
         }
     }
-//    For testing purposes, not required on the exercise
+
 //    public static void main(String[] args) {
 //        printMegaBytesAndKiloBytes(2050);
 //    }

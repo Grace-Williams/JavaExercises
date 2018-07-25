@@ -11,8 +11,10 @@ public class DecimalComparator {
             return true;
         }
     }
+
 //    public static void main(String[] args) {
-//        areEqualByThreeDecimalPlaces(3.0, 3.0);
+//        boolean hasPrint = areEqualByThreeDecimalPlaces(3.175, 3.176);
+//        System.out.println(toPrint);
 //    }
 
 }

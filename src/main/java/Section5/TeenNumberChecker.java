@@ -8,16 +8,15 @@ public class TeenNumberChecker {
         int max = 19;
 
         if ((first >= min && first <= max) || (second >= min && second <= max) || (third >= min && third <= max)){
-            System.out.println("true");
             return true;
         } else {
-            System.out.println("false");
             return false;
         }
     }
 
 //    public static void main(String[] args) {
-//        hasTeen(22, 23, 12);
+//        boolean hasPrint = hasTeen(22, 23, 24);
+//        System.out.println(hasPrint);
 //    }
 }
 

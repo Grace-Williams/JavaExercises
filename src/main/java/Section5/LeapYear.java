@@ -16,7 +16,8 @@ public class LeapYear {
     }
 
 //    public static void main(String[] args) {
-//        isLeapYear(2000);
+//        boolean hasPrint = isLeapYear(1600);
+//        System.out.println(hasPrint);
 //    }
 }
 
