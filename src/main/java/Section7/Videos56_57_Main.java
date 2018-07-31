@@ -14,19 +14,19 @@ public class Videos56_57_Main {
 //        bobsAccount.getBalance();
 
         // Video 57 - Constructors
-        Video57_VipCustomer billsAccount = new Video57_VipCustomer();
-        System.out.println("Customer name: " + billsAccount.getName57() + " with credit limit: " +
-                billsAccount.getCreditLimit() + " and email address: " + billsAccount.getEmailAddress57());
+        Video57_VipCustomer vipCustomer1 = new Video57_VipCustomer();
+        System.out.println("Customer name: " + vipCustomer1.getName57() + " with credit limit: " +
+                vipCustomer1.getCreditLimit() + " and email address: " + vipCustomer1.getEmailAddress57());
         System.out.println("*****************");
 
-        Video57_VipCustomer timsAccount = new Video57_VipCustomer("Tim", 2000.0);
-        System.out.println("Customer name: " + timsAccount.getName57() + " with credit limit: " +
-                timsAccount.getCreditLimit() + " and email address: " + timsAccount.getEmailAddress57());
+        Video57_VipCustomer vipCustomer2 = new Video57_VipCustomer("Tim", 2000.0);
+        System.out.println("Customer name: " + vipCustomer2.getName57() + " with credit limit: " +
+                vipCustomer2.getCreditLimit() + " and email address: " + vipCustomer2.getEmailAddress57());
         System.out.println("*****************");
 
-        Video57_VipCustomer annsAccount = new Video57_VipCustomer("Ann", 3000.0, "ann@email.com");
-        System.out.println("Customer name: " + annsAccount.getName57() + " with credit limit: " +
-                annsAccount.getCreditLimit() + " and email address: " + annsAccount.getEmailAddress57());
+        Video57_VipCustomer vipCustomer3 = new Video57_VipCustomer("Ann", 3000.0, "ann@email.com");
+        System.out.println("Customer name: " + vipCustomer3.getName57() + " with credit limit: " +
+                vipCustomer3.getCreditLimit() + " and email address: " + vipCustomer3.getEmailAddress57());
         System.out.println("*****************");
     }
 
