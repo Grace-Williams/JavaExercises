@@ -32,7 +32,7 @@ public class SumOddRange {
     }
 
     public static void main(String[] args) {
-        System.out.println(sumOdd(100, 1000));
+        System.out.println(sumOdd(1, 100));
     }
 }
 
