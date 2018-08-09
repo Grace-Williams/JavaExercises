@@ -5,19 +5,22 @@ public class FactorPrinter {
     public static void printFactors(int number) {
 
         if (number >= 1) {
-            findFactor(1, number);
+            findFactor(number);
         } else {
             System.out.println("Invalid Value");
         }
     }
 
-    public static void findFactor(int factor, int number2){
+    public static void findFactor(int number2){
+        int factor = 0;
 
         while (factor <= number2){
+            factor++;
             if(number2 % factor == 0){
                 System.out.println(factor);
+            } else {
+                continue;
             }
-            factor++;
         }
     }
 
