@@ -16,9 +16,10 @@ public class MegaBytesConverter {
         }
     }
 
-//    public static void main(String[] args) {
-//        printMegaBytesAndKiloBytes(2050);
-//    }
+    public static void main(String[] args) {
+
+        printMegaBytesAndKiloBytes(2050);
+    }
 }
 
 

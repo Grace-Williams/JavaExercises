@@ -17,10 +17,10 @@ public class PlayingCat {
         }
     }
 
-//    public static void main(String[] args) {
-//        boolean hasPrint = isCatPlaying(false, 35);
-//        System.out.println(hasPrint);
-//    }
+    public static void main(String[] args) {
+
+        System.out.println(isCatPlaying(false, 35));
+    }
 }
 
 // The cats spend most of the day playing. In particular, they play if the temperature is between 25 and 35 (inclusive).

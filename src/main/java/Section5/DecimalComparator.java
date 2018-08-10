@@ -12,10 +12,10 @@ public class DecimalComparator {
         }
     }
 
-//    public static void main(String[] args) {
-//        boolean hasPrint = areEqualByThreeDecimalPlaces(3.175, 3.176);
-//        System.out.println(toPrint);
-//    }
+    public static void main(String[] args) {
+
+        System.out.println(areEqualByThreeDecimalPlaces(-3.1756, -3.175));
+    }
 
 }
 

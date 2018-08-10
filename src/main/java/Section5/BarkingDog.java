@@ -13,10 +13,10 @@ public class BarkingDog {
         }
     }
 
-//    public static void main(String[] args) {
-//        boolean isbarking = bark(false, 2);
-//        System.out.println(barking);
-//    }
+    public static void main(String[] args) {
+
+        System.out.println(bark(true, 1));
+    }
 }
 
 // We have a dog that likes to bark. We need to wake up if the dog is barking at night!

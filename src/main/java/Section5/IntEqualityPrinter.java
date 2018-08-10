@@ -2,22 +2,23 @@ package Section5;
 
 public class IntEqualityPrinter {
 
-    public static void printEqual(int x, int y, int z){
+    public static void printEqual(int firstNumber, int secondNumber, int thirdNumber){
 
-        if (x < 0 || y < 0 || z < 0){
+        if (firstNumber < 0 || secondNumber < 0 || thirdNumber < 0){
             System.out.println("Invalid Value");
-        } else if ((x - y == 0) && (y - z == 0)){
+        } else if ((firstNumber - secondNumber == 0) && (secondNumber - thirdNumber == 0)){
             System.out.println("All numbers are equal");
-        } else if ((x - y != 0) && (y - z != 0) && (x - z !=0)){
+        } else if ((firstNumber - secondNumber != 0) && (secondNumber - thirdNumber != 0) && (firstNumber - thirdNumber !=0)){
             System.out.println("All numbers are different");
         } else {
             System.out.println("Neither all are equal or different");
         }
     }
 
-//    public static void main(String[] args) {
-//        printEqual(1,2,3);
-//    }
+    public static void main(String[] args) {
+
+        printEqual(1,1,3);
+    }
 }
 
 // Write a method printEqual with 3 parameters of type int.  The method should not return anything (void)

@@ -2,19 +2,19 @@ package Section5;
 
 public class EqualSumChecker {
 
-    public static boolean hasEqualSum(int first, int second, int third){
+    public static boolean hasEqualSum(int firstNumber, int secondNumber, int thirdNumber){
 
-        if (first + second == third){
+        if ((firstNumber + secondNumber) == thirdNumber){
             return true;
         } else {
             return false;
         }
     }
 
-//    public static void main(String[] args) {
-//        boolean hasPrint = hasEqualSum(1, 1, 1);
-//        System.out.println(hasPrint);
-//    }
+    public static void main(String[] args) {
+
+        System.out.println(hasEqualSum(1, 1, 1));
+    }
 }
 
 // Write a method hasEqualSum with 3 parameters of type int.

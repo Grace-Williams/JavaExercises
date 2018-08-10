@@ -2,22 +2,26 @@ package Section5;
 
 public class TeenNumberChecker {
 
-    public static boolean hasTeen(int first, int second, int third){
+    public static boolean hasTeen(int firstNumber, int secondNumber, int thirdNumber){
 
         int min = 13;
         int max = 19;
 
-        if ((first >= min && first <= max) || (second >= min && second <= max) || (third >= min && third <= max)){
+        boolean isFirstNumberValid = (firstNumber >= min) && (firstNumber <= max);
+        boolean isSecondNumberValid = (secondNumber >= min) && (secondNumber <= max);
+        boolean isThirdNumberValid = (thirdNumber >= min) && (thirdNumber <= max);
+
+        if (isFirstNumberValid || isSecondNumberValid || isThirdNumberValid){
             return true;
         } else {
             return false;
         }
     }
 
-//    public static void main(String[] args) {
-//        boolean hasPrint = hasTeen(22, 23, 24);
-//        System.out.println(hasPrint);
-//    }
+    public static void main(String[] args) {
+
+        System.out.println(hasTeen(23, 15, 42));
+    }
 }
 
 // We'll say that a number is teen if it is in the range of 13-19(inclusive)

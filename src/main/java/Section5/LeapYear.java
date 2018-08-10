@@ -15,10 +15,10 @@ public class LeapYear {
         }
     }
 
-//    public static void main(String[] args) {
-//        boolean hasPrint = isLeapYear(1600);
-//        System.out.println(hasPrint);
-//    }
+    public static void main(String[] args) {
+
+        System.out.println(isLeapYear(1600));
+    }
 }
 
 // Write a method isLeapYear with a parameter of type int named year

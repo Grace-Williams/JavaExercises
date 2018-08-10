@@ -23,11 +23,10 @@ public class AreaCalculator {
         return rectangleArea;
     }
 
-//    public static void main(String[] args) {
-//
-//        double printAnswer = area(-1);
-//        System.out.println(printAnswer);
-//    }
+    public static void main(String[] args) {
+
+        System.out.println(area(5.0));
+    }
 }
 
 // Write a method named area with one double parameter named radius
