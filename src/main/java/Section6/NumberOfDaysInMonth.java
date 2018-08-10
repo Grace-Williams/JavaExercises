@@ -15,27 +15,6 @@ public class NumberOfDaysInMonth {
         }
     }
 
-    private static boolean isYearValid(int validYear) {
-        return validYear >=1 && validYear <= 9999;
-    }
-
-    private static boolean isDivisibleBy4(int givenYear) {
-        return givenYear % 4 == 0;
-    }
-
-    private static boolean isNotDivisibleBy100(int givenYear){
-        return givenYear % 100 != 0;
-    }
-
-    private static boolean isDivisibleBy400(int givenYear){
-        return givenYear % 400 == 0;
-    }
-
-    private static boolean isMonthValid(int givenMonth){
-        return givenMonth >= 1 || givenMonth <= 12;
-    }
-
-
     public static int getDaysInMonth(int month, int year) {
 
         int numberOfDays;
@@ -74,9 +53,29 @@ public class NumberOfDaysInMonth {
         return numberOfDays;
     }
 
+    private static boolean isYearValid(int validYear) {
+        return validYear >=1 && validYear <= 9999;
+    }
+
+    private static boolean isDivisibleBy4(int givenYear) {
+        return givenYear % 4 == 0;
+    }
+
+    private static boolean isNotDivisibleBy100(int givenYear){
+        return givenYear % 100 != 0;
+    }
+
+    private static boolean isDivisibleBy400(int givenYear){
+        return givenYear % 400 == 0;
+    }
+
+    private static boolean isMonthValid(int givenMonth){
+        return givenMonth >= 1 || givenMonth <= 12;
+    }
+
     public static void main(String[] args) {
 
-        System.out.println(getDaysInMonth(-2, 2018));
+        System.out.println(getDaysInMonth(2, 2018));
     }
 }
 
