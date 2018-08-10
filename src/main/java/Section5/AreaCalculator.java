@@ -4,23 +4,26 @@ public class AreaCalculator {
 
     public static double area(double radius){
 
-        double PI = 3.14159;
-        double circleArea = radius * radius * PI;
-
         if (radius < 0.0){
             return -1.0;
         }
-        return circleArea;
+        return circleArea(radius);
     }
 
-    public static double area(double x, double y){
+    public static double area(double width, double length){
 
-        double rectangleArea = x * y;
-
-        if (x < 0.0 || y < 0.0){
+        if (width < 0.0 || length < 0.0){
             return -1.0;
         }
-        return rectangleArea;
+        return rectangleArea(width, length);
+    }
+
+    public static double circleArea(double radiusGiven){
+        return radiusGiven * radiusGiven * 3.14159;
+    }
+
+    public static double rectangleArea(double givenWidth, double givenLength){
+        return givenWidth * givenLength;
     }
 
     public static void main(String[] args) {

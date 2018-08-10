@@ -4,8 +4,8 @@ public class NumberOfDaysInMonth {
 
     public static boolean isLeapYear(int year){
 
-        if (year>=1 && year <= 9999){
-            if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+        if (isYearValid(year)){
+            if (isDivisibleBy4(year) && isNotDivisibleBy100(year) || isDivisibleBy400(year)) {
                 return true;
             } else {
                 return false;
@@ -15,13 +15,34 @@ public class NumberOfDaysInMonth {
         }
     }
 
+    private static boolean isYearValid(int validYear) {
+        return validYear >=1 && validYear <= 9999;
+    }
+
+    private static boolean isDivisibleBy4(int givenYear) {
+        return givenYear % 4 == 0;
+    }
+
+    private static boolean isNotDivisibleBy100(int givenYear){
+        return givenYear % 100 != 0;
+    }
+
+    private static boolean isDivisibleBy400(int givenYear){
+        return givenYear % 400 == 0;
+    }
+
+    private static boolean isMonthValid(int givenMonth){
+        return givenMonth >= 1 || givenMonth <= 12;
+    }
+
+
     public static int getDaysInMonth(int month, int year) {
 
         int numberOfDays;
-        if ((month < 1 || month > 12) || (year < 1 || year > 9999)) {
+
+        if (!isMonthValid(month) || (!isYearValid(year))) {
             return -1;
         } else {
-            numberOfDays = -1;
 
             switch (month) {
 
@@ -43,20 +64,19 @@ public class NumberOfDaysInMonth {
                     break;
 
                 case 2:
-                    if (isLeapYear(year)) {
-                        numberOfDays = 29;
-                    } else {
-                        numberOfDays = 28;
-                    }
+                    numberOfDays = isLeapYear(year) ? 29: 28;
                     break;
+
+                default:
+                    numberOfDays = -1;
             }
         }
         return numberOfDays;
     }
 
     public static void main(String[] args) {
-        int toPrint = getDaysInMonth(2, -2020);
-        System.out.println(toPrint);
+
+        System.out.println(getDaysInMonth(-2, 2018));
     }
 }
 
