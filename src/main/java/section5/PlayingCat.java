@@ -2,26 +2,22 @@ package section5;
 
 public class PlayingCat {
 
-    public static boolean isCatPlaying(boolean summer, int temperature){
+    public static boolean isCatPlaying(boolean summer, int temperature) {
+        int limit = 35;
 
-        if (summer == true){
-            if(temperature >= 25 && temperature <= 45){
-                return true;
-            }
-            return false;
-        } else {
-            if(temperature >= 25 && temperature <= 35){
-                return true;
-            }
-            return false;
+        if (summer) {
+            limit = 45;
         }
+
+        return (temperature >= 25 && temperature <= limit);
     }
 
     public static void main(String[] args) {
 
-        System.out.println(isCatPlaying(false, 35));
+        System.out.println(isCatPlaying(false, 36));
     }
 }
+
 
 // The cats spend most of the day playing. In particular, they play if the temperature is between 25 and 35 (inclusive).
 // Unless it is summer, then the upper limit is 45(inclusive) instead of 35

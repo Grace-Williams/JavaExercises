@@ -4,18 +4,69 @@ public class BarkingDog {
 
     public static boolean bark(boolean barking, int hourOfDay) {
 
-        if (barking == true && (hourOfDay < 8 && hourOfDay >=0) || barking == true && (hourOfDay > 22 && hourOfDay == 23)) {
-            return true;
-        } else if (barking == true && hourOfDay >= 8 || barking == true && hourOfDay <= 22) {
+        if (hourOfDay < 0 || hourOfDay > 23) {
             return false;
         } else {
-            return false;
+            boolean isNight = (hourOfDay < 8 || hourOfDay > 22);
+            return barking && isNight;
         }
     }
 
     public static void main(String[] args) {
 
-        System.out.println(bark(true, 1));
+        // look at truth tables
+        //system.out.println for 'every' possible combination
+        // barking (true, false) hourOfDay(-1 -> 23)
+        System.out.println(bark(true, -1)); // should return false
+        System.out.println(bark(true, 1)); // should return true
+        System.out.println(bark(true, 2)); // should return true
+        System.out.println(bark(true, 3)); // should return true
+        System.out.println(bark(true, 4)); // should return true
+        System.out.println(bark(true, 5)); // should return true
+        System.out.println(bark(true, 6)); // should return true
+        System.out.println(bark(true, 7)); // should return true
+        System.out.println(bark(true, 8)); // should return false
+        System.out.println(bark(true, 9)); // should return false
+        System.out.println(bark(true, 10)); // should return false
+        System.out.println(bark(true, 11)); // should return false
+        System.out.println(bark(true, 12)); // should return false
+        System.out.println(bark(true, 13)); // should return false
+        System.out.println(bark(true, 14)); // should return false
+        System.out.println(bark(true, 15)); // should return false
+        System.out.println(bark(true, 16)); // should return false
+        System.out.println(bark(true, 17)); // should return false
+        System.out.println(bark(true, 18)); // should return false
+        System.out.println(bark(true, 19)); // should return false
+        System.out.println(bark(true, 20)); // should return false
+        System.out.println(bark(true, 21)); // should return false
+        System.out.println(bark(true, 22)); // should return false
+        System.out.println(bark(true, 23)); // should return true
+        System.out.println("********");
+
+        System.out.println(bark(false, -1));  // should return false
+        System.out.println(bark(false, 1));   // should return false
+        System.out.println(bark(false, 2));   // should return false
+        System.out.println(bark(false, 3));   // should return false
+        System.out.println(bark(false, 4));
+        System.out.println(bark(false, 5));
+        System.out.println(bark(false, 6));
+        System.out.println(bark(false, 7));
+        System.out.println(bark(false, 8));
+        System.out.println(bark(false, 9));
+        System.out.println(bark(false, 10));
+        System.out.println(bark(false, 11));
+        System.out.println(bark(false, 12));
+        System.out.println(bark(false, 13));
+        System.out.println(bark(false, 14));
+        System.out.println(bark(false, 15));
+        System.out.println(bark(false, 16));
+        System.out.println(bark(false, 17));
+        System.out.println(bark(false, 18));
+        System.out.println(bark(false, 19));
+        System.out.println(bark(false, 20));
+        System.out.println(bark(false, 21));
+        System.out.println(bark(false, 22));
+        System.out.println(bark(false, 23));  // should return false
     }
 }
 

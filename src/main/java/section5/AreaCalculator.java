@@ -8,9 +8,8 @@ public class AreaCalculator {
             return -1.0;
         }
         double PI = 3.14159;
-        double circleArea = radius * radius * PI;
 
-        return circleArea;
+        return (radius * radius) * PI;  // double circleArea = (radius * radius) * PI;
     }
 
     public static double area(double width, double length) {
@@ -18,9 +17,8 @@ public class AreaCalculator {
         if (width < 0.0 || length < 0.0) {
             return -1.0;
         }
-        double rectangleArea = width * length;
 
-        return rectangleArea;
+        return width * length;  // double rectangleArea = width * length;
     }
 
     public static void main(String[] args) {
@@ -44,7 +42,7 @@ public class AreaCalculator {
 
 // TIP: circle area = radius * PI, PI = 3.14159
 // rectangle area = x * y
-// NOTE: The radius methods need to be defined as public static
+// NOTE: The methods need to be defined as public static
 // Do not add a main method
 
 

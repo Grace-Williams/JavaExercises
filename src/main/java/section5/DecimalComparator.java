@@ -4,19 +4,16 @@ public class DecimalComparator {
 
     public static boolean areEqualByThreeDecimalPlaces(double firstNumber, double secondNumber){
 
-        int difference = (int)((firstNumber * 1000) - (secondNumber * 1000));
-        if (difference != 0){
-            return false;
-        } else {
+        if((int)(firstNumber * 1000) == (int)(secondNumber * 1000)){
             return true;
         }
+        return false;
     }
 
     public static void main(String[] args) {
 
-        System.out.println(areEqualByThreeDecimalPlaces(-3.1756, -3.175));
+        System.out.println(areEqualByThreeDecimalPlaces(3.175, 3.176));
     }
-
 }
 
 // Write a method areEqualByThreeDecimalPlaces with two parameters of type double
