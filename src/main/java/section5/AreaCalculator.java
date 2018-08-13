@@ -2,25 +2,25 @@ package section5;
 
 public class AreaCalculator {
 
-    public static double area(double radius){
+    public static double area(double radius) {
 
-        if (radius < 0.0){
+        if (radius < 0.0) {
             return -1.0;
         }
-            double PI = 3.14159;
-            double circleArea = radius * radius * PI;
+        double PI = 3.14159;
+        double circleArea = radius * radius * PI;
 
-            return circleArea;
+        return circleArea;
     }
 
-    public static double area(double width, double length){
+    public static double area(double width, double length) {
 
-        if (width < 0.0 || length < 0.0){
+        if (width < 0.0 || length < 0.0) {
             return -1.0;
         }
-            double rectangleArea = width * length;
+        double rectangleArea = width * length;
 
-            return rectangleArea;
+        return rectangleArea;
     }
 
     public static void main(String[] args) {
