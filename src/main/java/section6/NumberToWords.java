@@ -7,8 +7,11 @@ public class NumberToWords {
         if (number < 0) {
             System.out.println("Invalid Value");
         }
+        int count = getDigitCount(number);
+        int number1 = reverse(number);
+        int remainder;
         do {
-            int remainder = number % 10;
+            remainder = number1 % 10;
             switch (remainder) {
                 case 0:
                     System.out.print("Zero ");
@@ -42,44 +45,46 @@ public class NumberToWords {
                     break;
                 default:
                     System.out.print("");
-
             }
-            number = number / 10;
+            number1 = number1 / 10;
+            count--;
 
-        } while (number > 0);
-
+        } while (count > 0);
     }
 
-    public static void reverse(int numberToReverse) {
+    public static int reverse(int numberToReverse) {
 
         int remainder;
         int reverse = 0;
 
-        while (numberToReverse >0){
+        while (numberToReverse != 0) {
             remainder = numberToReverse % 10;
-            System.out.print(remainder);
-
-            if (numberToReverse < 0) {
-                numberToReverse = numberToReverse / -10;
-            } else {
-                numberToReverse = numberToReverse / 10;
-            }
-
             reverse = reverse * 10;
             reverse += remainder;
+            numberToReverse = numberToReverse / 10;
         }
-        System.out.println(" ");
 
-        numberToWords(reverse);
+        return reverse;
     }
 
+    public static int getDigitCount(int number) {
+
+        if (number < 0) {
+            return -1;
+        }
+        int count = 0;
+        do {
+            number /= 10;
+            count++;
+        } while (number > 0);
+
+        return count;
+    }
 
     public static void main(String[] args) {
-      reverse(1200);
-      //  numberToWords(123);
+        numberToWords(120);
 
     }
-
 }
 
 // Write a method called numberToWords with one int parameter named number
