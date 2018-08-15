@@ -1,30 +1,30 @@
-package section7;
+package section7.lecture56;
 
 // This main is used for both Videos 56 and 57 challenges
 
-public class Videos56_57_Main {
+public class Main {
 
     public static void main(String[] args) {
 
         // Video 56 -encapsulation
-//        Video56_BankAccount bobsAccount = new Video56_BankAccount();
+//        BankAccount bobsAccount = new BankAccount();
 //        bobsAccount.getBalance();
 //        bobsAccount.deposit(100);
 //        bobsAccount.withdraw(20);
 //        bobsAccount.getBalance();
 
         // Video 57 - Constructors
-        Video57_VipCustomer vipCustomer1 = new Video57_VipCustomer();
+        VipCustomer vipCustomer1 = new VipCustomer();
         System.out.println("Customer name: " + vipCustomer1.getName57() + " with credit limit: " +
                 vipCustomer1.getCreditLimit() + " and email address: " + vipCustomer1.getEmailAddress57());
         System.out.println("*****************");
 
-        Video57_VipCustomer vipCustomer2 = new Video57_VipCustomer("Tim", 2000.0);
+        VipCustomer vipCustomer2 = new VipCustomer("Tim", 2000.0);
         System.out.println("Customer name: " + vipCustomer2.getName57() + " with credit limit: " +
                 vipCustomer2.getCreditLimit() + " and email address: " + vipCustomer2.getEmailAddress57());
         System.out.println("*****************");
 
-        Video57_VipCustomer vipCustomer3 = new Video57_VipCustomer("Ann", 3000.0, "ann@email.com");
+        VipCustomer vipCustomer3 = new VipCustomer("Ann", 3000.0, "ann@email.com");
         System.out.println("Customer name: " + vipCustomer3.getName57() + " with credit limit: " +
                 vipCustomer3.getCreditLimit() + " and email address: " + vipCustomer3.getEmailAddress57());
         System.out.println("*****************");

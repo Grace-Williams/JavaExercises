@@ -1,25 +1,20 @@
-package section8;
+package section8.lecture73;
 
-public class Video73_Porsche extends Video73_Car{
+public class Audi extends Car {
 
-    public Video73_Porsche(String name, int cylinder) {
+    public Audi(String name, int cylinder) {
 
         super(name, cylinder);
     }
 
     @Override
     public String accelerate() {
-        return "Porsche accelerate() called";
+        return "Audi accelerate() called";
     }
 
     @Override
     public String startEngine() {
-        return "Porsche startEngine() called";
-    }
-
-    @Override
-    public String brake(){
-        return "Porsche -> brake() called";
+        return "Audi startEngine() called";
     }
 }
 

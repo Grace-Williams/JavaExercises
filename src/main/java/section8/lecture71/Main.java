@@ -1,10 +1,10 @@
-package section8;
+package section8.lecture71;
 
-public class Video71_Main {
+public class Main {
 
     public static void main(String[] args) {
 
-        Video71_Printer printer = new Video71_Printer(55, 101,true);
+        Printer printer = new Printer(55, 101,true);
         printer.addToner();
         printer.getPagesToPrint();
     }

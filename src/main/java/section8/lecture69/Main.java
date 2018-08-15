@@ -1,19 +1,19 @@
-package section8;
+package section8.lecture69;
 
-public class Video69_Main {
+public class Main {
 
     public static void main(String[] args) {
 
-        Video69_Wall wall1 = new Video69_Wall("north");
-        Video69_Wall wall2 = new Video69_Wall("south");
-        Video69_Wall wall3 = new Video69_Wall("east");
-        Video69_Wall wall4 = new Video69_Wall("west");
+        Wall wall1 = new Wall("north");
+        Wall wall2 = new Wall("south");
+        Wall wall3 = new Wall("east");
+        Wall wall4 = new Wall("west");
 
-        Video69_Lamp lamp = new Video69_Lamp("2010", true);
+        Lamp lamp = new Lamp("2010", true);
 
-        Video69_Bed bed = new Video69_Bed(10, 3, 5, "king size");
+        Bed bed = new Bed(10, 3, 5, "king size");
 
-        Video69_Bedroom bedroom = new Video69_Bedroom(wall1, wall2, wall3, wall4, lamp, bed);
+        Bedroom bedroom = new Bedroom(wall1, wall2, wall3, wall4, lamp, bed);
         bedroom.makeBed();
 
         bedroom.getLamp().turnOn();

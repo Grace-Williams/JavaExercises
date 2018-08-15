@@ -1,10 +1,10 @@
-package section8;
+package section8.lecture73;
 
-public class Video73_Main {
+public class Main {
 
     public static void main(String[] args) {
 
-        Video73_Car car = new Video73_Car("Unknown name", 0);
+        Car car = new Car("Unknown name", 0);
         System.out.println(car.getName());
         System.out.println("Number of cylinder: " + car.getCylinder());
         System.out.println(car.startEngine());
@@ -12,7 +12,7 @@ public class Video73_Main {
         System.out.println(car.brake());
         System.out.println("******************");
 
-        Video73_BMW bmw = new Video73_BMW("BMW i8", 3);
+        BMW bmw = new BMW("BMW i8", 3);
         System.out.println(bmw.getName());
         System.out.println("Number of cylinder: " + bmw.getCylinder());
         System.out.println(bmw.startEngine());
@@ -20,7 +20,7 @@ public class Video73_Main {
         System.out.println(bmw.brake());
         System.out.println("******************");
 
-        Video73_Audi audi = new Video73_Audi("Audi r8", 10);
+        Audi audi = new Audi("Audi r8", 10);
         System.out.println(audi.getName());
         System.out.println("Number of cylinder: " + audi.getCylinder());
         System.out.println(audi.startEngine());
@@ -28,7 +28,7 @@ public class Video73_Main {
         System.out.println(audi.brake());
         System.out.println("******************");
 
-        Video73_Porsche porsche = new Video73_Porsche("Porsche 911", 6);
+        Porsche porsche = new Porsche("Porsche 911", 6);
         System.out.println(porsche.getName());
         System.out.println("Number of cylinder: " + porsche.getCylinder());
         System.out.println(porsche.startEngine());

@@ -1,12 +1,12 @@
-package section8;
+package section8.lecture71;
 
-public class Video71_Printer {
+public class Printer {
 
     private int tonerLevel;
     private int pagesToPrint;
     private boolean isDuplexPrinter;
 
-    public Video71_Printer(int tonerLevel, int pagesToPrint, boolean isDuplexPrinter) {
+    public Printer(int tonerLevel, int pagesToPrint, boolean isDuplexPrinter) {
         this.tonerLevel = tonerLevel;
         this.isDuplexPrinter = isDuplexPrinter;
         this.pagesToPrint = pagesToPrint;

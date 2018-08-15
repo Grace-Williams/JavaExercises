@@ -1,16 +1,16 @@
-package section8;
+package section8.lecture69;
 
-public class Video69_Bedroom {
+public class Bedroom {
 
-    private Video69_Wall wall1;
-    private Video69_Wall wall2;
-    private Video69_Wall wall3;
-    private Video69_Wall wall4;
+    private Wall wall1;
+    private Wall wall2;
+    private Wall wall3;
+    private Wall wall4;
 
-    private Video69_Lamp lamp;
-    private Video69_Bed bed;
+    private Lamp lamp;
+    private Bed bed;
 
-    public Video69_Bedroom(Video69_Wall wall1, Video69_Wall wall2, Video69_Wall wall3, Video69_Wall wall4, Video69_Lamp lamp, Video69_Bed bed) {
+    public Bedroom(Wall wall1, Wall wall2, Wall wall3, Wall wall4, Lamp lamp, Bed bed) {
         this.wall1 = wall1;
         this.wall2 = wall2;
         this.wall3 = wall3;
@@ -19,7 +19,7 @@ public class Video69_Bedroom {
         this.bed = bed;
     }
 
-    public Video69_Lamp getLamp() {
+    public Lamp getLamp() {
         return lamp;
     }
 

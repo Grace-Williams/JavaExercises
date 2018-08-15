@@ -1,13 +1,13 @@
-package section8;
+package section8.lecture73;
 
-public class Video73_Car {
+public class Car {
 
     private String name;
     private boolean engine;
     private int cylinder;
     private int wheels;
 
-    public Video73_Car(String name, int cylinder) {
+    public Car(String name, int cylinder) {
         this.name = name;
         this.cylinder = cylinder;
         this.engine = true;

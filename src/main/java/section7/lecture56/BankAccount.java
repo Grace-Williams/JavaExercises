@@ -1,6 +1,6 @@
-package section7;
+package section7.lecture56;
 
-public class Video56_BankAccount {
+public class BankAccount {
 
     private String accountNumber;
     private double balance;

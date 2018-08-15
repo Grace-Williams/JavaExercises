@@ -1,10 +1,10 @@
-package section7;
+package section7.lecture65;
 
-public class Video65_BMW extends Video65_Car{
+public class BMW extends Car {
 
     private String colour;
 
-    public Video65_BMW(String name, int currentSpeed, int door, int gear, String colour) {
+    public BMW(String name, int currentSpeed, int door, int gear, String colour) {
         super(name, currentSpeed, door, gear);
         this.colour = colour;
     }

@@ -1,12 +1,12 @@
-package section7;
+package section7.lecture65;
 
-public class Video65_Vehicle {
+public class Vehicle {
 
     private String name;
     private int currentSpeed;
 
 
-    public Video65_Vehicle(String name, int currentSpeed) {
+    public Vehicle(String name, int currentSpeed) {
         this.name = name;
         this.currentSpeed = currentSpeed;
 

@@ -1,13 +1,13 @@
-package section8;
+package section8.lecture69;
 
-public class Video69_Bed {
+public class Bed {
 
     private int length;
     private int height;
     private int width;
     private String style;
 
-    public Video69_Bed(int length, int height, int width, String style) {
+    public Bed(int length, int height, int width, String style) {
         this.length = length;
         this.height = height;
         this.width = width;
@@ -15,7 +15,7 @@ public class Video69_Bed {
     }
 
     public void make(){
-        System.out.println("Video69_Bed -> Making bed.");
+        System.out.println("Bed -> Making bed.");
     }
 
     public int getLength() {

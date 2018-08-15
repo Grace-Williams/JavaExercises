@@ -1,25 +1,25 @@
-package section7;
+package section7.lecture56;
 
-public class Video57_VipCustomer {
+public class VipCustomer {
 
     private String name57;
     private double creditLimit;
     private String emailAddress57;
 
     // constructor empty should call the constructor with 3 parameters with default values
-    public Video57_VipCustomer(){
+    public VipCustomer(){
         this("Default",0.0, "default@email.com");
     }
 
     // constructor should pass on the 2 values it receives and add a default value for the 3rd
-    public Video57_VipCustomer(String name57, double creditLimit) {
+    public VipCustomer(String name57, double creditLimit) {
         this(name57, creditLimit, "defaul@email.com");
         this.creditLimit = creditLimit;
         this.emailAddress57 = emailAddress57;
     }
 
     // constructor should save all fields
-    public Video57_VipCustomer(String name57, double creditLimit, String emailAddress57) {
+    public VipCustomer(String name57, double creditLimit, String emailAddress57) {
         this.name57 = name57;
         this.creditLimit = creditLimit;
         this.emailAddress57 = emailAddress57;

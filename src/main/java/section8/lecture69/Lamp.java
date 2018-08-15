@@ -1,11 +1,11 @@
-package section8;
+package section8.lecture69;
 
-public class Video69_Lamp {
+public class Lamp {
 
     private String yearMade;
     private boolean isBatteryOperated;
 
-    public Video69_Lamp(String yearMade, boolean isBatteryOperated) {
+    public Lamp(String yearMade, boolean isBatteryOperated) {
         this.yearMade = yearMade;
         this.isBatteryOperated = isBatteryOperated;
     }

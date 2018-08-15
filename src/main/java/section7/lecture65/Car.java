@@ -1,11 +1,11 @@
-package section7;
+package section7.lecture65;
 
-public class Video65_Car extends Video65_Vehicle{
+public class Car extends Vehicle {
 
     private int door;
     private int gear;
 
-    public Video65_Car(String name, int currentSpeed, int door, int gear) {
+    public Car(String name, int currentSpeed, int door, int gear) {
         super(name, currentSpeed);
         this.door = door;
         this.gear = gear;

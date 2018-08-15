@@ -1,10 +1,10 @@
-package section8;
+package section8.lecture69;
 
-public class Video69_Wall {
+public class Wall {
 
     private String nameOfDirection;
 
-    public Video69_Wall(String nameOfDirection) {
+    public Wall(String nameOfDirection) {
         this.nameOfDirection = nameOfDirection;
     }
 
