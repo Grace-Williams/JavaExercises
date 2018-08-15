@@ -18,8 +18,6 @@ public class FactorPrinter {
             factor++;
             if(number2 % factor == 0){
                 System.out.println(factor);
-            } else {
-                continue;
             }
         }
     }
