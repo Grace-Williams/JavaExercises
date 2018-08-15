@@ -1,6 +1,6 @@
 package section6;
 
-public class Lecture41_PrimeNumberChallenge {
+public class Lecture42_PrimeNumberChallenge {
 
     public static boolean isPrime(int number) {
 
