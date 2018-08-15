@@ -9,13 +9,12 @@ public class FlourPacker {
         if (bigCount < 0 || smallCount < 0 || goal < 0 || sum < goal) {
             return false;
         }
-        int bigPacks = goal / 5;
 
-        return (bigPacks * 5) + smallCount >= goal;
+        return goal % 5 <= smallCount;
     }
 
     public static void main(String[] args) {
-        System.out.println(canPack(0,5,4));
+        System.out.println(canPack(-3,2,12));
     }
 
 }
