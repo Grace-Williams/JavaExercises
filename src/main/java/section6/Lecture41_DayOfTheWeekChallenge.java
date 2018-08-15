@@ -1,6 +1,6 @@
 package section6;
 
-public class DayOfTheWeekChallenge {
+public class Lecture41_DayOfTheWeekChallenge {
 
     public static void printDayOfTheWeek(int day){
 
@@ -66,4 +66,4 @@ public class DayOfTheWeekChallenge {
 
 // Bonus:
 // Write a second solution using if then else, instead of using switch
-// Create a new project in intelliJ with the name "DayOfTheWeekChallenge"
+// Create a new project in intelliJ with the name "Lecture41_DayOfTheWeekChallenge"
