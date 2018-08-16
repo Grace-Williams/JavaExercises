@@ -9,6 +9,7 @@ public class BMW extends Car {
         this.colour = colour;
     }
 
+    @Override
     public void move(int speed){
         speed = getCurrentSpeed() + speed;
         System.out.println("The BMW is now moving at " + speed);

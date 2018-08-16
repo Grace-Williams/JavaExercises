@@ -13,8 +13,8 @@ public class Vehicle {
     }
 
     public void move(int speed){
-        speed += this.currentSpeed;
-        System.out.println("Vehicle.move() called -> The vehicle is moving with a speed of " + speed);
+        this.currentSpeed += speed;
+        System.out.println("Vehicle.move() called -> The vehicle is moving with a speed of " + this.currentSpeed);
     }
 
     public void stop(){

@@ -11,8 +11,10 @@ public class Car extends Vehicle {
         this.gear = gear;
     }
 
-    public String getName(){
-        return super.getName();
+    @Override
+    public void move(int speed) {
+        super.move(speed);
+        changeGear();
     }
 
     public int getDoor() {
@@ -21,6 +23,35 @@ public class Car extends Vehicle {
 
     public int getGear() {
         return gear;
+    }
+
+    public void setGear(int gear) {
+        this.gear = gear;
+    }
+
+    public void changeGear(){
+
+        int carSpeed = super.getCurrentSpeed();
+
+        if (carSpeed <= 0){
+            super.stop();
+        } else if (carSpeed > 0 && carSpeed <= 5 ) {
+            setGear(1);
+            System.out.println("The Car is currently on gear " + getGear() + ", current speed of " + carSpeed);
+        } else if (carSpeed > 5 && carSpeed <= 20 ) {
+            setGear(2);
+            System.out.println("The Car is currently on gear " + getGear() + ", current speed of " + carSpeed);
+        } else if (carSpeed > 20 && carSpeed <= 35 ) {
+            setGear(3);
+            System.out.println("The Car is currently on gear " + getGear() + ", current speed of " + carSpeed);
+        } else if (carSpeed > 35 && carSpeed <= 45 ) {
+            setGear(4);
+            System.out.println("The Car is currently on gear " + getGear() + ", current speed of " + carSpeed);
+        } else {
+            setGear(5);
+            System.out.println("The Car is currently on gear " + getGear() + ", current speed of " + carSpeed);
+
+        }
     }
 }
 

@@ -4,10 +4,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Vehicle vehicle = new Vehicle("Vehicle", 10);
-        vehicle.move(20);
+        Vehicle vehicle = new Vehicle("Vehicle", 0);
+        vehicle.move(10);
         vehicle.stop();
         System.out.println("***************");
+
+        Car car = new Car("Car", 0, 4, 0);
+        car.changeGear();
+        car.move(2);
+        car.move(10);
+        car.move(20);
+        System.out.println("*************");
 
         BMW bmw = new BMW("BMW M5", 100, 2, 6, "Black");
         System.out.println(bmw.getName());
