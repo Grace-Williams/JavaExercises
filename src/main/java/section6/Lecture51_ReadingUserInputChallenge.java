@@ -27,8 +27,10 @@ public class Lecture51_ReadingUserInputChallenge {
             } else {
                 System.out.println("Invalid input");
             }
+            scanner.nextLine();
         }
         System.out.println("Total sum: " + sum);
+        scanner.close();
     }
 }
 
