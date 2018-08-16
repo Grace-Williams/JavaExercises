@@ -8,6 +8,22 @@ public class BankAccount {
     private String email;
     private String phoneNumber;
 
+    public void deposit(double depositAmount){
+
+        this.balance = this.balance + depositAmount;
+        System.out.println("The current balance after your deposit of £" + depositAmount + " is £" + this.balance);
+    }
+
+    public void withdrawal(double withdrawalAmount){
+
+        if (withdrawalAmount > this.balance){
+            System.out.println("Insufficient funds.");
+        }
+
+        this.balance = this.balance - withdrawalAmount;
+        System.out.println("The current balance after your withdrawal of £" + withdrawalAmount + " is £" + this.balance);
+    }
+
     public String getAccountNumber() {
         return accountNumber;
     }
@@ -17,7 +33,6 @@ public class BankAccount {
     }
 
     public double getBalance() {
-        System.out.println("Your current balance is " + balance);
         return balance;
     }
 
@@ -47,20 +62,6 @@ public class BankAccount {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-    }
-
-    public void deposit(double depositAmount) {
-        this.balance = this.balance + depositAmount;
-        System.out.println("The current balance after the deposit amount of " + depositAmount + " is " + this.balance);
-    }
-
-    public void withdraw(double withdrawalAmount){
-        if(this.balance < withdrawalAmount){
-            System.out.println("Unable to process your withdrawal due to insufficient funds.");
-        } else {
-            this.balance = this.balance - withdrawalAmount;
-            System.out.println("The current balance after the withdrawal amount of " + withdrawalAmount + " is " + this.balance);
-        }
     }
 }
 

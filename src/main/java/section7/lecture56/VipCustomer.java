@@ -2,39 +2,36 @@ package section7.lecture56;
 
 public class VipCustomer {
 
-    private String name57;
+    private String vipName;
     private double creditLimit;
-    private String emailAddress57;
+    private String vipEmail;
 
-    // constructor empty should call the constructor with 3 parameters with default values
     public VipCustomer(){
-        this("Default",0.0, "default@email.com");
+        this("Default", 0.0,"default@email.com");
     }
 
-    // constructor should pass on the 2 values it receives and add a default value for the 3rd
-    public VipCustomer(String name57, double creditLimit) {
-        this(name57, creditLimit, "defaul@email.com");
+    public VipCustomer(String vipName, double creditLimit) {
+        this(vipName, creditLimit, "default@email.com");
+        this.vipName = vipName;
         this.creditLimit = creditLimit;
-        this.emailAddress57 = emailAddress57;
     }
 
-    // constructor should save all fields
-    public VipCustomer(String name57, double creditLimit, String emailAddress57) {
-        this.name57 = name57;
+    public VipCustomer(String vipName, double creditLimit, String vipEmail) {
+        this.vipName = vipName;
         this.creditLimit = creditLimit;
-        this.emailAddress57 = emailAddress57;
+        this.vipEmail = vipEmail;
     }
 
-    public String getName57() {
-        return name57;
+    public String getVipName() {
+        return vipName;
     }
 
     public double getCreditLimit() {
         return creditLimit;
     }
 
-    public String getEmailAddress57() {
-        return emailAddress57;
+    public String getVipEmail() {
+        return vipEmail;
     }
 }
 

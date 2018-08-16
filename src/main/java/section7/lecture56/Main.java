@@ -6,32 +6,32 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Video 56
-        BankAccount bobsAccount = new BankAccount();
-        bobsAccount.getBalance();
-        bobsAccount.deposit(100);
-        bobsAccount.withdraw(20);
-        bobsAccount.getBalance();
+        BankAccount account = new BankAccount();
+        account.setCustomerName("Clark Kent");
+        account.setAccountNumber("123-456-7890");
+        account.setEmail("clark@kent.com");
+        account.setPhoneNumber("555-5555");
+        account.setBalance(1000);
+
+        System.out.println("Account name: " + account.getCustomerName());
+        System.out.println("Email address: " + account.getEmail() + " Contact number: " + account.getPhoneNumber());
+        System.out.println("Accout number: " + account.getAccountNumber());
+        System.out.println("Current balance : £" + account.getBalance());
+        account.deposit(3000);
+        account.withdrawal(200);
 
         System.out.println();
 
-        // Video 57
-        VipCustomer vipCustomer1 = new VipCustomer();
-        System.out.println("Customer name: " + vipCustomer1.getName57() + " with credit limit: " +
-                vipCustomer1.getCreditLimit() + " and email address: " + vipCustomer1.getEmailAddress57());
-        System.out.println("*****************");
+        VipCustomer bobsAccount = new VipCustomer();
+        System.out.println("Name: " + bobsAccount.getVipName() +  ", Credit limit: " + bobsAccount.getCreditLimit() + ", Email: " + bobsAccount.getVipEmail());
 
-        VipCustomer vipCustomer2 = new VipCustomer("Tim", 2000.0);
-        System.out.println("Customer name: " + vipCustomer2.getName57() + " with credit limit: " +
-                vipCustomer2.getCreditLimit() + " and email address: " + vipCustomer2.getEmailAddress57());
-        System.out.println("*****************");
+        VipCustomer annsAccount = new VipCustomer("Ann No", 1500);
+        System.out.println("Name: " + annsAccount.getVipName() +  ", Credit limit: " + annsAccount.getCreditLimit() + ", Email: " + annsAccount.getVipEmail());
 
-        VipCustomer vipCustomer3 = new VipCustomer("Ann", 3000.0, "ann@email.com");
-        System.out.println("Customer name: " + vipCustomer3.getName57() + " with credit limit: " +
-                vipCustomer3.getCreditLimit() + " and email address: " + vipCustomer3.getEmailAddress57());
-        System.out.println("*****************");
+        VipCustomer timsAccount = new VipCustomer("Tim My", 2300, "tim@email.co.uk");
+        System.out.println("Name: " + timsAccount.getVipName() +  ", Credit limit: " + timsAccount.getCreditLimit() + ", Email: " + timsAccount.getVipEmail());
+
     }
-
 }
 
 // Video 56 challenge - Encapsulation:
