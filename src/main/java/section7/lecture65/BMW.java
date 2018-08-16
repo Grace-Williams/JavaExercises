@@ -9,11 +9,6 @@ public class BMW extends Car {
         this.colour = colour;
     }
 
-    public void changeSpeed(){
-        super.getCurrentSpeed();
-        super.move(30);
-
-    }
     public void move(int speed){
         speed = getCurrentSpeed() + speed;
         System.out.println("The BMW is now moving at " + speed);

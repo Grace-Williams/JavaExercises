@@ -15,11 +15,6 @@ public class Car extends Vehicle {
         return super.getName();
     }
 
-    @Override
-    public int getCurrentSpeed() {
-        return super.getCurrentSpeed();
-    }
-
     public int getDoor() {
         return door;
     }

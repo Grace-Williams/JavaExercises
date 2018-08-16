@@ -5,8 +5,6 @@ public class Main {
     public static void main(String[] args) {
 
         Vehicle vehicle = new Vehicle("Vehicle", 10);
-        vehicle.getCurrentSpeed();
-        vehicle.getName();
         vehicle.move(20);
         vehicle.stop();
         System.out.println("***************");
@@ -18,9 +16,6 @@ public class Main {
         System.out.println(bmw.getGear());
         System.out.println(bmw.getColour());
         bmw.move(60);
-        bmw.changeSpeed();
-        bmw.stop();
-        bmw.getColour();
         System.out.println("***************");
     }
 }
