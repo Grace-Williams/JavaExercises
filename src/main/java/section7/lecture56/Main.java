@@ -6,14 +6,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Video 56 -encapsulation
-//        BankAccount bobsAccount = new BankAccount();
-//        bobsAccount.getBalance();
-//        bobsAccount.deposit(100);
-//        bobsAccount.withdraw(20);
-//        bobsAccount.getBalance();
+        // Video 56
+        BankAccount bobsAccount = new BankAccount();
+        bobsAccount.getBalance();
+        bobsAccount.deposit(100);
+        bobsAccount.withdraw(20);
+        bobsAccount.getBalance();
 
-        // Video 57 - Constructors
+        System.out.println();
+
+        // Video 57
         VipCustomer vipCustomer1 = new VipCustomer();
         System.out.println("Customer name: " + vipCustomer1.getName57() + " with credit limit: " +
                 vipCustomer1.getCreditLimit() + " and email address: " + vipCustomer1.getEmailAddress57());
