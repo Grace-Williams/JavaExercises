@@ -1,93 +1,46 @@
 package section8.lecture74;
 
 public class Hamburger {
-    private String name;
-    private RollType rollType;
+
+    private String burgerName;
     private Meat meat;
-    private double burgerPrice;
-    private double totalAdditionsPrice;
+    private BreadRoll breadRoll;
+    private double baseBurgerPrice;
 
-    public Hamburger(String name, RollType rollType, Meat meat, double burgerPrice) {
-        this.name = name;
-        this.rollType = rollType;
+    private Additions additions;
+
+    public Hamburger(String burgerName, Meat meat, BreadRoll breadRoll, double baseBurgerPrice, Additions additions) {
+        this.burgerName = burgerName;
         this.meat = meat;
-        this.burgerPrice = burgerPrice;
-        this.totalAdditionsPrice = 0;
+        this.breadRoll = breadRoll;
+        this.baseBurgerPrice = baseBurgerPrice;
+        this.additions = additions;
     }
 
-    public double getTotalAdditionsPrice(String additions) {
-        double additionsPrice = 0.0;
-        int counter = 0;
-
-        while (true) {
-            if (counter == 5) {
-                break;
-            }
-            switch (additions.toLowerCase()) {
-                case "lettuce":
-                    counter += 1;
-                    additionsPrice = .50;
-                    System.out.println("lettuce - price £" + additionsPrice);
-                    break;
-
-                case "tomato":
-                    counter += 1;
-                    additionsPrice = .50;
-                    System.out.println("tomato - price £" + additionsPrice);
-                    break;
-
-                case "bacon":
-                    counter += 1;
-                    additionsPrice = 1.00;
-                    System.out.println("bacon - price £" + additionsPrice);
-                    break;
-
-                case "egg":
-                    counter += 1;
-                    additionsPrice = 1.00;
-                    System.out.println("egg - price £" + additionsPrice);
-                    break;
-
-                case "avocado":
-                    counter += 1;
-                    additionsPrice = 1.00;
-                    System.out.println("avocado - price £" + additionsPrice);
-                    break;
-
-                case "hash brown":
-                    counter += 1;
-                    additionsPrice = 1.00;
-                    System.out.println("hash brown - price £" + additionsPrice);
-                    break;
-            }
-
-        }
-        System.out.println(totalAdditionsPrice);
-        return totalAdditionsPrice += additionsPrice;
-    }
-
-
-    public double totalPrice(){
-
-        double totalPrice = this.burgerPrice + totalAdditionsPrice;
-
-        return totalPrice;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public RollType getRollType() {
-        return rollType;
+    public String getBurgerName() {
+        return burgerName;
     }
 
     public Meat getMeat() {
         return meat;
     }
 
-    public double getBurgerPrice() {
-        return this.burgerPrice;
+    public BreadRoll getBreadRoll() {
+        return breadRoll;
+    }
+
+    public double getBaseBurgerPrice() {
+        return baseBurgerPrice;
+    }
+
+    public Additions getAdditions() {
+        return additions;
+    }
+
+    public double totalBurgerPrice(){
+        double totalPrice = this.baseBurgerPrice + additions.getAdditionsTotal();
+        System.out.println("Total burger price + additions = £" + totalPrice);
+        return totalPrice;
     }
 
 }
@@ -118,4 +71,3 @@ public class Hamburger {
 // All 3 classes should have a method that can be called anytime to show the base price of the hamburger plus all additions,
 // each showing the addition name, and addition price, and a grand/final total for the burger (base price + all additions)
 // For the 2 additional classes this may require you to be looking at the base class for pricing and then adding totals to final price
-

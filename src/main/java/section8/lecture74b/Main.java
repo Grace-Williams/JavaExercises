@@ -1,17 +1,34 @@
-package section8.lecture74;
+package section8.lecture74b;
 
-public class HealthyBurger extends Hamburger{
+public class Main {
 
-    Additions healthyAdditions = new Additions("tomato", .50, "pineapple slice", 1.00);
+    public static void main(String[] args) {
+        Meat meat = new Meat("Angus beef", 4.0);
+        RollType rollType = new RollType("Brioche bun");
 
+        Hamburger hamburger = new Hamburger("Hamburger", rollType, meat, 5.00);
+        hamburger.getTotalAdditionsPrice("egg");
+        hamburger.getTotalAdditionsPrice("bacon");
+        System.out.println(hamburger.getName() + " - " + hamburger.getMeat().getType() + " in " + hamburger.getRollType().getType()) ;
+        System.out.println("Each burger costs £" + hamburger.getBurgerPrice());
 
-    public HealthyBurger(Meat meat, BreadRoll breadRoll, double baseBurgerPrice, Additions healthyAdditions) {
-        super("Healthy burger", meat, breadRoll, baseBurgerPrice, healthyAdditions);
-        this.healthyAdditions= healthyAdditions;
+        System.out.println("The total price for the hamburger is £" + hamburger.totalPrice());
+        System.out.println("********************");
+
+        RollType healthyRoll = new RollType("Brown Rye bread");
+        Meat veggieMeat = new Meat("Quorn", 6.0);
+
+        HealthyBurger healthyBurger = new HealthyBurger("Healthy Burger", healthyRoll, veggieMeat, hamburger.totalPrice());
+        System.out.println(healthyBurger.getName() + " - " + healthyBurger.getMeat().getType() + " in " + healthyBurger.getRollType().getType());
+        System.out.println("Each healthy burger costs: £" + healthyBurger.getBurgerPrice());
+
+        System.out.println("The total price for the Healthy burger is £" + healthyBurger.totalPrice());
+        System.out.println("********************");
+
     }
 
 }
-
+// Main, Hamburger, RollType, Meat, HealthyBurger, DeluxeBurger
 // The purpose of the application is to help a fictitious company called Bill Burgers
 // to manage their process of selling hamburgers
 // Our application will help Bill to select types of burgers, some of the additional items (additions)
@@ -38,4 +55,3 @@ public class HealthyBurger extends Hamburger{
 // All 3 classes should have a method that can be called anytime to show the base price of the hamburger plus all additions,
 // each showing the addition name, and addition price, and a grand/final total for the burger (base price + all additions)
 // For the 2 additional classes this may require you to be looking at the base class for pricing and then adding totals to final price
-

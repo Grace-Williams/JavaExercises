@@ -1,13 +1,40 @@
-package section8.lecture74;
+package section8.lecture74b;
 
 public class HealthyBurger extends Hamburger{
 
-    Additions healthyAdditions = new Additions("tomato", .50, "pineapple slice", 1.00);
+    private double totalAdditionsPrice;
 
+    public HealthyBurger(String name, RollType rollType, Meat meat, double burgerPrice) {
+        super(name, rollType, meat, burgerPrice);
+        this.totalAdditionsPrice = 0;
+    }
 
-    public HealthyBurger(Meat meat, BreadRoll breadRoll, double baseBurgerPrice, Additions healthyAdditions) {
-        super("Healthy burger", meat, breadRoll, baseBurgerPrice, healthyAdditions);
-        this.healthyAdditions= healthyAdditions;
+//    @Override
+//    public double getTotalAdditionsPrice(int numberOfAdditions, double additionsPrice){
+//        totalAdditionsPrice = numberOfAdditions * additionsPrice;
+//
+//        if(numberOfAdditions > 2){
+//            System.out.println("Only 2 additions allowed for the Healthy burger.");
+//        }
+//
+//        System.out.println("The number of additions for the healthy burger is: " + numberOfAdditions +
+//                ", each addition costs: £" + additionsPrice + ". Total additional price = £" + totalAdditionsPrice);
+//
+//        return totalAdditionsPrice;
+//    }
+
+    @Override
+    public double totalPrice(){
+
+        double totalPrice = getBurgerPrice() + totalAdditionsPrice;
+
+        return totalPrice;
+    }
+
+    @Override
+    public double getBurgerPrice() {
+
+        return super.getBurgerPrice();
     }
 
 }

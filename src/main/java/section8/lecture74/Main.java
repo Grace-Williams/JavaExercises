@@ -3,32 +3,48 @@ package section8.lecture74;
 public class Main {
 
     public static void main(String[] args) {
-        Meat meat = new Meat("Angus beef", 4.0);
-        RollType rollType = new RollType("Brioche bun");
+        Meat meat = new Meat("Angus beef", 4);
+        BreadRoll breadRoll = new BreadRoll("Brioche bun");
+        Additions additions = new Additions("lettuce", .50, "egg",
+                1.0, "bacon", 1, "Cheese", 1.0);
 
-        Hamburger hamburger = new Hamburger("Hamburger", rollType, meat, 5.00);
-        hamburger.getTotalAdditionsPrice("egg");
-        hamburger.getTotalAdditionsPrice("bacon");
-        System.out.println(hamburger.getName() + " - " + hamburger.getMeat().getType() + " in " + hamburger.getRollType().getType()) ;
-        System.out.println("Each burger costs £" + hamburger.getBurgerPrice());
+        Hamburger hamburger = new Hamburger("HouseBurger", meat, breadRoll,5.0, additions);
 
-        System.out.println("The total price for the hamburger is £" + hamburger.totalPrice());
-        System.out.println("********************");
+        System.out.println(hamburger.getBurgerName() + " in a " + hamburger.getBreadRoll().getType() + " with " + hamburger.getMeat().getWeight()+ " oz. " + hamburger.getMeat().getType());
+        System.out.println("This burger costs £" + hamburger.getBaseBurgerPrice());
+        hamburger.totalBurgerPrice();
 
-        RollType healthyRoll = new RollType("Brown Rye bread");
-        Meat veggieMeat = new Meat("Quorn", 6.0);
+        System.out.println("************");
+        Meat quorn = new Meat("Quorn", 6);
+        BreadRoll brownRye = new BreadRoll("Brown rye bread roll");
+        Additions healthyAdditions = new Additions("lettuce", .50,
+                "tomato", .50, "pineapple slice", 1.00,
+                "cheese", 1.00, "egg", 1.0, "bacon", 1.0);
 
-        HealthyBurger healthyBurger = new HealthyBurger("Healthy Burger", healthyRoll, veggieMeat, hamburger.totalPrice());
-        System.out.println(healthyBurger.getName() + " - " + healthyBurger.getMeat().getType() + " in " + healthyBurger.getRollType().getType());
-        System.out.println("Each healthy burger costs: £" + healthyBurger.getBurgerPrice());
+        HealthyBurger healthyburger = new HealthyBurger(quorn, brownRye, 5.0, healthyAdditions);
 
-        System.out.println("The total price for the Healthy burger is £" + healthyBurger.totalPrice());
-        System.out.println("********************");
+        System.out.println(healthyburger.getBurgerName() + " in a " + healthyburger.getBreadRoll().getType() + " with " + healthyburger.getMeat().getWeight()+ " oz. " + healthyburger.getMeat().getType());
+        System.out.println("This burger costs £" + healthyburger.getBaseBurgerPrice());
+        healthyburger.totalBurgerPrice();
+
+        System.out.println("************");
+        Meat deluxeMeat = new Meat("Angus beef", 6);
+        Additions deluxeAdditions = new Additions("lettuce", .50, "egg",
+                1.0, "bacon", 1, "Cheese", 1.0,
+                "Coke", 1.0, "French fries", 1.0);
+
+        DeluxeBurger deluxeBurger = new DeluxeBurger(deluxeMeat, breadRoll, hamburger.getBaseBurgerPrice(), deluxeAdditions);
+
+        System.out.println(deluxeBurger.getBurgerName() + " in a " + deluxeBurger.getBreadRoll().getType() + " with " + deluxeBurger.getMeat().getWeight()+ " oz. " + deluxeBurger.getMeat().getType());
+        System.out.println("This burger costs £" + deluxeBurger.getBaseBurgerPrice());
+        deluxeBurger.totalBurgerPrice();
+
+
 
     }
-
 }
-// Main, Hamburger, RollType, Meat, HealthyBurger, DeluxeBurger
+
+
 // The purpose of the application is to help a fictitious company called Bill Burgers
 // to manage their process of selling hamburgers
 // Our application will help Bill to select types of burgers, some of the additional items (additions)

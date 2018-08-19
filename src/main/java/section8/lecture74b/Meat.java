@@ -1,13 +1,21 @@
-package section8.lecture74;
+package section8.lecture74b;
 
-public class HealthyBurger extends Hamburger{
+public class Meat {
 
-    Additions healthyAdditions = new Additions("tomato", .50, "pineapple slice", 1.00);
+    private String type;
+    private double weight;
 
+    public Meat(String type, double weight) {
+        this.type = type;
+        this.weight = weight;
+    }
 
-    public HealthyBurger(Meat meat, BreadRoll breadRoll, double baseBurgerPrice, Additions healthyAdditions) {
-        super("Healthy burger", meat, breadRoll, baseBurgerPrice, healthyAdditions);
-        this.healthyAdditions= healthyAdditions;
+    public String getType() {
+        return type;
+    }
+
+    public double getWeight(){
+        return weight;
     }
 
 }
