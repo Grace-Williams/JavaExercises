@@ -1,0 +1,10 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'application'
+}
+
+group 'com.worth'
+version '1.0-SNAPSHOT'
+
+mainClassName = 'com.worth.exercises.basket.Shop'
