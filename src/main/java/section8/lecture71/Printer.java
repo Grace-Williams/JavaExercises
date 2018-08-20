@@ -12,28 +12,25 @@ public class Printer {
         this.pagesToPrint = pagesToPrint;
     }
 
-    public int addToner() {
+    public void addToner() {
 
         int tonerToAdd = 0;
 
-        if (tonerLevel < 100){
+        if (tonerLevel < 100) {
             tonerToAdd = 100 - tonerLevel;
         } else {
             System.out.println("No need to add Toner");
         }
         System.out.println("Toner to add: " + tonerToAdd);
-        return tonerToAdd;
     }
 
-    public int getPagesToPrint(){
+    public void getPagesToPrint() {
 
-        if (isDuplexPrinter){
-            pagesToPrint = (pagesToPrint/2) + (pagesToPrint % 2);
-        } else {
-            this.pagesToPrint= pagesToPrint;
+        if (isDuplexPrinter) {
+            this.pagesToPrint = (pagesToPrint / 2) + (pagesToPrint % 2);
         }
-        System.out.println("The number of pages to be printed is " + pagesToPrint);
-        return pagesToPrint;
+
+        System.out.println("The number of pages to be printed is " + this.pagesToPrint);
     }
 
 }

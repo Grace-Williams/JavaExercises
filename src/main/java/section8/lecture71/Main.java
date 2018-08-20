@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Printer printer = new Printer(55, 101,true);
+        Printer printer = new Printer(55, 101, true);
         printer.addToner();
         printer.getPagesToPrint();
     }
