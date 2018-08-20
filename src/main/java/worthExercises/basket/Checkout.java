@@ -1,4 +1,4 @@
-package worth.basket;
+package worthExercises.basket;
 
 public class Checkout {
 

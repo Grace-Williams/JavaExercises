@@ -1,4 +1,4 @@
-package worth.basket;
+package worthExercises.basket;
 
 public class Shop {
     public static void main(String [] args) {
