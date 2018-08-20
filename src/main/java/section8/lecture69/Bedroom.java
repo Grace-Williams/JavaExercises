@@ -19,12 +19,28 @@ public class Bedroom {
         this.bed = bed;
     }
 
+    public Wall getWall1() {
+        return wall1;
+    }
+
+    public Wall getWall2() {
+        return wall2;
+    }
+
+    public Wall getWall3() {
+        return wall3;
+    }
+
+    public Wall getWall4() {
+        return wall4;
+    }
+
     public Lamp getLamp() {
         return lamp;
     }
 
-    public void makeBed(){
-        bed.make();
+    public Bed getBed() {
+        return bed;
     }
 }
 

@@ -2,15 +2,28 @@ package section8.lecture69;
 
 public class Wall {
 
-    private String nameOfDirection;
+    private String directionOfWall;
+    private int length;
+    private int width;
 
-    public Wall(String nameOfDirection) {
-        this.nameOfDirection = nameOfDirection;
+    public Wall(String directionOfWall, int length, int width) {
+        this.directionOfWall = directionOfWall;
+        this.length = length;
+        this.width = width;
     }
 
-    public String getNameOfDirection() {
-        return nameOfDirection;
+    public String getDirectionOfWall() {
+        return directionOfWall;
     }
+
+    public int getLength() {
+        return length;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
 }
 
 // Create a single room of a house using composition

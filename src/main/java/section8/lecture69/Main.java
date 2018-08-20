@@ -4,22 +4,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Wall wall1 = new Wall("north");
-        Wall wall2 = new Wall("south");
-        Wall wall3 = new Wall("east");
-        Wall wall4 = new Wall("west");
+        Wall wall1 = new Wall("north", 20, 25);
+        Wall wall2 = new Wall("south", 20, 25);
+        Wall wall3 = new Wall("west", 20, 35);
+        Wall wall4 = new Wall("east", 20, 35);
 
-        Lamp lamp = new Lamp("2010", true);
-
-        Bed bed = new Bed(10, 3, 5, "king size");
+        Bed bed = new Bed(10, 8, 2, "King");
+        Lamp lamp = new Lamp("Classic", true, 2);
 
         Bedroom bedroom = new Bedroom(wall1, wall2, wall3, wall4, lamp, bed);
-        bedroom.makeBed();
-
-        bedroom.getLamp().turnOn();
-
-
+        bedroom.getBed().makeBed();
     }
+
 }
 
 // Create a single room of a house using composition
