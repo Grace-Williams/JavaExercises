@@ -23,16 +23,24 @@ public class Checkout {
                     total -= .20;
                 }
             }
+
             // Free kilo/s of carrots for every 4 fruits
             if ((basket.getBananas() != 0) && (basket.getOranges() != 0) && (basket.getApples() != 0) && (basket.getPeppers() != 0)) {
+
                 int fruits = basket.getBananas() + basket.getOranges() + basket.getApples() + basket.getPeppers();
                 int freeCarrots = fruits / 4;
+                double carrotDiscount = freeCarrots * .65;
+
                 System.out.println("Free " + freeCarrots + " kilos of carrots!");
+
                 if (basket.getKilosOfCarrots() != 0) {
-                    double carrotDiscount = freeCarrots * .65;
-                    total -= carrotDiscount;
-                }
-            }
+                    if (basket.getKilosOfCarrots() > freeCarrots) {
+                        total -= carrotDiscount;
+                    }
+                    total -= calculateCarrotPrice(); // if only 1 kilo of carrots bought (included on the basket)
+                }                                    // and they are entitled to 4 kilos free, only the price of
+                                                    // the 1 kilo will be deducted to the total amount as
+            }                                       // the other 3 will be given without deducting from the total amount
             return total;
         }
 
