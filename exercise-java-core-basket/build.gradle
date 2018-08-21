@@ -4,7 +4,7 @@ plugins {
     id 'application'
 }
 
-group 'com.worthExercises'
+group 'com.worth'
 version '1.0-SNAPSHOT'
 
-mainClassName = 'com.worthExercises.exercises.basket.Shop'
+mainClassName = 'com.worth.exercises.basket.Shop'
