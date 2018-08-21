@@ -15,37 +15,46 @@ public class Checkout {
                     calculateCarrotPrice() +
                     calculateCourgettePrice());
 
-            // Fruits: apples, bananas, oranges, peppers    Vegetables: courgettes, carrots
-            // Free courgette if fruits are more than 5
-            if ((basket.getBananas() + basket.getOranges() + basket.getApples() + basket.getPeppers()) >= 5) {
-                System.out.println("You got yourself a free courgette!");
-                if (basket.getCourgettes() != 0) {
-                    total -= .20;
-                }
-            }
-
-            // Free kilo/s of carrots for every 4 fruits
-            if ((basket.getBananas() != 0) && (basket.getOranges() != 0) && (basket.getApples() != 0) && (basket.getPeppers() != 0)) {
-
-                int fruits = basket.getBananas() + basket.getOranges() + basket.getApples() + basket.getPeppers();
-                int freeCarrots = fruits / 4;
-                double carrotDiscount = freeCarrots * .65;
-
-                System.out.println("Free " + freeCarrots + " kilos of carrots!");
-
-                if (basket.getKilosOfCarrots() != 0) {
-                    if (basket.getKilosOfCarrots() > freeCarrots) {
-                        total -= carrotDiscount;
-                    }
-                    total -= calculateCarrotPrice(); // if only 1 kilo of carrots bought (included on the basket)
-                }                                    // and they are entitled to 4 kilos free, only the price of
-                                                     // the 1 kilo will be deducted to the total amount as
-            }                                       // the other 3 will be given without deducting from the total amount
-            return total;
+            return total - freeCarrotsPrice() - freeCourgettePrice();
         }
 
         return 0;
     }
+
+    // Free kilo/s of carrots for every 4 fruits
+    public double freeCarrotsPrice() {
+        if ((basket.getBananas() != 0) && (basket.getOranges() != 0) && (basket.getApples() != 0) && (basket.getPeppers() != 0)) {
+
+            int fruits = basket.getBananas() + basket.getOranges() + basket.getApples() + basket.getPeppers();
+            int freeCarrots = fruits / 4;
+            double carrotDiscount = freeCarrots * .65;
+
+            System.out.println("Free " + freeCarrots + " kilos of carrots!");
+
+            if (basket.getKilosOfCarrots() != 0) {
+                if (basket.getKilosOfCarrots() > freeCarrots) {
+                    return carrotDiscount;
+                }
+                return calculateCarrotPrice();  // if only 1 kilo of carrots bought (included on the basket)
+            }                                   // and they are entitled to 4 kilos free, only the price of
+        }                                       // the 1 kilo will be deducted to the total amount as
+                                                // the other 3 will be given without deducting from the total amount
+        return 0;
+    }
+
+    // FRUITS: apples, bananas, oranges, peppers    VEGETABLES: courgettes, carrots
+    // Free courgette if fruits are more than 5
+    public double freeCourgettePrice() {
+        if ((basket.getBananas() + basket.getOranges() + basket.getApples() + basket.getPeppers()) > 5) {
+            System.out.println("You got yourself a free courgette!");
+
+            if (basket.getCourgettes() != 0) {
+                return .20;              // Only 1 courgette is free when sum of the fruits is more than 5,
+            }                            // this is deducted is a courgette is in the basket
+        }
+        return 0;
+    }
+
 
     public double calculateBananaPrice() {
         return basket.getBananas() * .18;
@@ -58,6 +67,7 @@ public class Checkout {
     public double calculateApplePrice() {
 
         int numberOfApples = basket.getApples();
+
         double priceOfApple = numberOfApples * .25;
 
         if (numberOfApples > 3 && numberOfApples <= 7) {
@@ -88,6 +98,7 @@ public class Checkout {
         return basket.getPeppers() * .55;
     }
 }
+
 
 // Goal:
 // The shopping basket contains an order for apples (25p), bananas (18p) , oranges (35p), carrots (65p per kilo),
