@@ -55,7 +55,6 @@ public class Checkout {
         return 0;
     }
 
-
     public double calculateBananaPrice() {
         return basket.getBananas() * .18;
     }
