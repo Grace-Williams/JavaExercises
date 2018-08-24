@@ -6,24 +6,38 @@ public class Main {
         Meat meat = new Meat("Angus beef", 4.0);
         RollType rollType = new RollType("Brioche bun");
 
-        Hamburger hamburger = new Hamburger("Hamburger", rollType, meat, 5.00);
+        Hamburger hamburger = new Hamburger("Hamburger", rollType, meat, 5.0);
         hamburger.getTotalAdditionsPrice("egg");
+        hamburger.getTotalAdditionsPrice("bacon");
+        hamburger.getTotalAdditionsPrice("lettuce");
+        hamburger.getTotalAdditionsPrice("cheese");
         hamburger.getTotalAdditionsPrice("bacon");
         System.out.println(hamburger.getName() + " - " + hamburger.getMeat().getType() + " in " + hamburger.getRollType().getType()) ;
         System.out.println("Each burger costs £" + hamburger.getBurgerPrice());
-
         System.out.println("The total price for the hamburger is £" + hamburger.totalPrice());
+
         System.out.println("********************");
 
         RollType healthyRoll = new RollType("Brown Rye bread");
         Meat veggieMeat = new Meat("Quorn", 6.0);
 
         HealthyBurger healthyBurger = new HealthyBurger("Healthy Burger", healthyRoll, veggieMeat, hamburger.totalPrice());
+        healthyBurger.getTotalAdditionsPrice("avocado");
+        healthyBurger.getTotalAdditionsPrice("tomato");
+        healthyBurger.getTotalAdditionsPrice("cheese");
         System.out.println(healthyBurger.getName() + " - " + healthyBurger.getMeat().getType() + " in " + healthyBurger.getRollType().getType());
         System.out.println("Each healthy burger costs: £" + healthyBurger.getBurgerPrice());
-
         System.out.println("The total price for the Healthy burger is £" + healthyBurger.totalPrice());
+
         System.out.println("********************");
+
+        Deluxe deluxe = new Deluxe("Deluxe burger", rollType, meat, hamburger.getBurgerPrice());
+        deluxe.getTotalAdditionsPrice("drink");
+        deluxe.getTotalAdditionsPrice("cheese");
+        deluxe.getTotalAdditionsPrice("chips");
+        deluxe.getTotalAdditionsPrice("drink");
+
+        System.out.println("The total price for this burger is £" + deluxe.totalPrice());
 
     }
 

@@ -1,16 +1,57 @@
 package section8.lecture74b;
 
-public class Deluxe extends Hamburger{
+public class Deluxe extends Hamburger {
 
     private double totalAdditionsPrice;
+    private static int deluxeCount = 0;
 
     public Deluxe(String name, RollType rollType, Meat meat, double burgerPrice) {
         super(name, rollType, meat, burgerPrice);
         this.totalAdditionsPrice = 0;
     }
 
+    @Override
+    public void getTotalAdditionsPrice(String additions) {
+        double additionsPrice = 0;
 
+        if (deluxeCount < 2) {
+            switch (additions.toLowerCase()) {
 
+                case "drink":
+                    deluxeCount++;
+                    additionsPrice = .50;
+                    System.out.println("drink - price £" + additionsPrice);
+                    break;
+
+                case "chips":
+                    deluxeCount++;
+                    additionsPrice = 1.0;
+                    System.out.println("chips - price £" + additionsPrice);
+                    break;
+
+                default:
+                    System.out.println("Other additions are not available on this meal.");
+            }
+            totalAdditionsPrice += additionsPrice;
+        } else {
+            System.out.println("This burger has reached the maximum additions allowed.");
+        }
+
+    }
+
+    @Override
+    public double getBurgerPrice() {
+
+        return super.getBurgerPrice();
+    }
+
+    @Override
+    public double totalPrice() {
+
+        double totalPrice = getBurgerPrice() + totalAdditionsPrice;
+
+        return totalPrice;
+    }
 
 }
 

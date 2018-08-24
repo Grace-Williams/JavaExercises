@@ -1,6 +1,6 @@
 package section8.lecture74b;
 
-public class HealthyBurger extends Hamburger{
+public class HealthyBurger extends Hamburger {
 
     private double totalAdditionsPrice;
 
@@ -9,32 +9,76 @@ public class HealthyBurger extends Hamburger{
         this.totalAdditionsPrice = 0;
     }
 
-//    @Override
-//    public double getTotalAdditionsPrice(int numberOfAdditions, double additionsPrice){
-//        totalAdditionsPrice = numberOfAdditions * additionsPrice;
-//
-//        if(numberOfAdditions > 2){
-//            System.out.println("Only 2 additions allowed for the Healthy burger.");
-//        }
-//
-//        System.out.println("The number of additions for the healthy burger is: " + numberOfAdditions +
-//                ", each addition costs: £" + additionsPrice + ". Total additional price = £" + totalAdditionsPrice);
-//
-//        return totalAdditionsPrice;
-//    }
-
     @Override
-    public double totalPrice(){
+    public void getTotalAdditionsPrice(String additions) {
+        double additionsPrice = 0;
 
-        double totalPrice = getBurgerPrice() + totalAdditionsPrice;
+        if (counter < 6) {
+            switch (additions.toLowerCase()) {
 
-        return totalPrice;
+                case "lettuce":
+                    counter++;
+                    additionsPrice = .50;
+                    System.out.println("lettuce - price £" + additionsPrice);
+                    break;
+
+                case "tomato":
+                    counter++;
+                    additionsPrice = .50;
+                    System.out.println("tomato - price £" + additionsPrice);
+                    break;
+
+                case "bacon":
+                    counter++;
+                    additionsPrice = 1.00;
+                    System.out.println("bacon - price £" + additionsPrice);
+                    break;
+
+                case "egg":
+                    counter++;
+                    additionsPrice = 1.00;
+                    System.out.println("egg - price £" + additionsPrice);
+                    break;
+
+                case "avocado":
+                    counter++;
+                    additionsPrice = 1.00;
+                    System.out.println("avocado - price £" + additionsPrice);
+                    break;
+
+                case "hash brown":
+                    counter++;
+                    additionsPrice = 1.00;
+                    System.out.println("hash brown - price £" + additionsPrice);
+                    break;
+
+                case "cheese":
+                    counter++;
+                    additionsPrice = 1.00;
+                    System.out.println("cheese - price £" + additionsPrice);
+                    break;
+
+                default:
+                    System.out.println("Not available.");
+            }
+            totalAdditionsPrice += additionsPrice;
+        } else {
+            System.out.println("This burger has reached the maximum additions allowed.");
+        }
     }
 
     @Override
     public double getBurgerPrice() {
 
         return super.getBurgerPrice();
+    }
+
+    @Override
+    public double totalPrice() {
+
+        double totalPrice = getBurgerPrice() + totalAdditionsPrice;
+
+        return totalPrice;
     }
 
 }

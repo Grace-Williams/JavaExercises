@@ -6,6 +6,7 @@ public class Hamburger {
     private Meat meat;
     private double burgerPrice;
     private double totalAdditionsPrice;
+    public static int counter = 0;
 
     public Hamburger(String name, RollType rollType, Meat meat, double burgerPrice) {
         this.name = name;
@@ -15,63 +16,66 @@ public class Hamburger {
         this.totalAdditionsPrice = 0;
     }
 
-    public double getTotalAdditionsPrice(String additions) {
-        double additionsPrice = 0.0;
-        int counter = 0;
+    public void getTotalAdditionsPrice(String additions) {
+        double additionsPrice = 0;
 
-        while (true) {
-            if (counter == 5) {
-                break;
-            }
+        if (counter < 4) {
             switch (additions.toLowerCase()) {
+
                 case "lettuce":
-                    counter += 1;
+                    counter++;
                     additionsPrice = .50;
                     System.out.println("lettuce - price £" + additionsPrice);
                     break;
 
                 case "tomato":
-                    counter += 1;
+                    counter++;
                     additionsPrice = .50;
                     System.out.println("tomato - price £" + additionsPrice);
                     break;
 
                 case "bacon":
-                    counter += 1;
+                    counter++;
                     additionsPrice = 1.00;
                     System.out.println("bacon - price £" + additionsPrice);
                     break;
 
                 case "egg":
-                    counter += 1;
+                    counter++;
                     additionsPrice = 1.00;
                     System.out.println("egg - price £" + additionsPrice);
                     break;
 
                 case "avocado":
-                    counter += 1;
+                    counter++;
                     additionsPrice = 1.00;
                     System.out.println("avocado - price £" + additionsPrice);
                     break;
 
                 case "hash brown":
-                    counter += 1;
+                    counter++;
                     additionsPrice = 1.00;
                     System.out.println("hash brown - price £" + additionsPrice);
                     break;
-            }
 
+                case "cheese":
+                    counter++;
+                    additionsPrice = 1.00;
+                    System.out.println("cheese - price £" + additionsPrice);
+                    break;
+
+                default:
+                    System.out.println("Not available.");
+            }
+            totalAdditionsPrice += additionsPrice;
+        } else {
+            System.out.println("This burger has reached the maximum additions allowed.");
         }
-        System.out.println(totalAdditionsPrice);
-        return totalAdditionsPrice += additionsPrice;
     }
 
+    public double totalPrice() {
 
-    public double totalPrice(){
-
-        double totalPrice = this.burgerPrice + totalAdditionsPrice;
-
-        return totalPrice;
+        return this.burgerPrice + totalAdditionsPrice;
     }
 
     public String getName() {
