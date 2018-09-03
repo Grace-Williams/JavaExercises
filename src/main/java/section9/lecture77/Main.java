@@ -33,15 +33,9 @@ public class Main {
     }
 
     public static int[] sortIntegers(int[] sorted) {
-        for (int i = 0; i < sorted.length; i++) {
+        Arrays.sort(sorted);
 
-            Arrays.sort(sorted);
-            System.out.print(sorted[i] + " ");
-
-        }
-
-        System.out.println();
-        System.out.println("Reverse: ");
+        System.out.print("Descending order: ");
 
         for (int j = sorted.length - 1; 0 <= j; j--) {
             System.out.print(sorted[j] + " ");
