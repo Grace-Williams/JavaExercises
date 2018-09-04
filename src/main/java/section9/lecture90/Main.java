@@ -1,6 +1,29 @@
 package section9.lecture90;
 
 public class Main {
+
+    public static void main(String[] args) {
+
+        Bank bank = new Bank("National Australia Bank");
+
+        bank.addBranch("Adelaide");
+
+        bank.addCustomer("Adelaide", "Tim", 50.12);
+        bank.addCustomer("Adelaide", "Mike", 100.35);
+        bank.addCustomer("Adelaide", "Percy", 45.90);
+
+        bank.addBranch("Sydney");
+        bank.addCustomer("Sydney", "Bob", 340.10);
+
+        bank.addCustomerTransaction("Adelaide", "Tim", 20.10);
+        bank.addCustomerTransaction("Adelaide", "Tim", 90.00);
+        bank.addCustomerTransaction("Adelaide", "Tim", 37.50);
+
+        bank.listCustomer("Adelaide", true);
+        bank.listCustomer("Sydney", true);
+
+
+    }
 }
 
 // You job is to create a simple banking application.

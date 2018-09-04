@@ -1,7 +1,5 @@
 package section9.lecture90;
 
-import org.apache.tomcat.util.digester.ArrayStack;
-
 import java.util.ArrayList;
 
 public class Customer {
@@ -11,11 +9,12 @@ public class Customer {
 
     public Customer(String name, double initialAmount) {
         this.name = name;
-        this.transactions = new ArrayStack<Double>();
+        this.transactions = new ArrayList<Double>();
         addTransaction(initialAmount);
     }
 
     public void addTransaction(double amount){
+
         this.transactions.add(amount);
     }
 

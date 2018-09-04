@@ -16,14 +16,40 @@ public class Branch {
         return name;
     }
 
- //   private boolean newCustomer(String customerName, double initialAmount){
-//        if(findCustomer(customerName) == null){
-//            this.customers.add(new Customer((customerName, initialAmount)));
-//            return true;
-//        }
-//    }
-//
-//
+    public ArrayList<Customer> getCustomers() {
+        return customers;
+    }
+
+    public boolean newCustomer(String customerName, double initialAmount){
+        if(findCustomer(customerName) == null){  // if customer is not on the list means we can add that customer & the initial amount, hence, return true
+            this.customers.add(new Customer(customerName, initialAmount));
+            return true;
+        }
+        return false;  // false because if customer exists, we cannot add that customer and initial amount
+    }
+
+    public boolean addBranchCustomerTransaction(String customerName, double amount){
+        Customer existingCustomer = findCustomer(customerName);
+
+        if(existingCustomer != null){
+            existingCustomer.addTransaction(amount);
+            return true;
+        }
+        return false;
+    }
+
+    private Customer findCustomer(String customerName){
+        for(int i=0; i<this.customers.size(); i++){
+            Customer checkedCustomer = this.customers.get(i);
+            if(checkedCustomer.getName().equals(customerName)){
+                return checkedCustomer;
+            }
+        }
+        return null;  // means customer is not on the ist so we return null
+
+    }
+
+
 }
 
 
