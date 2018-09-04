@@ -1,9 +1,9 @@
-package section9.ArrayList;
+package section9.arrayList;
 
 import java.util.ArrayList;
 
 public class GroceryList {
-    private ArrayList<String> groceryList = new ArrayList<>(); // ArrayList is a class and we are calling the empty constructor here ()
+    private ArrayList<String> groceryList = new ArrayList<>(); // arrayList is a class and we are calling the empty constructor here ()
 
     public void addGroceryItem(String item) {
         groceryList.add(item);

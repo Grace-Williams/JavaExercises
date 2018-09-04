@@ -1,7 +1,8 @@
-package section9.lecture90;
+package section9.lecture77;
 
-public class Main {
+public class Bank {
 }
+
 
 // You job is to create a simple banking application.
 // There should be a Bank class

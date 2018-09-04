@@ -1,4 +1,4 @@
-package section9;
+package section9.array;
 
 public class ArraySample {
 

@@ -1,4 +1,4 @@
-package section9.ArrayList;
+package section9.arrayList;
 
 import java.util.Scanner;
 
