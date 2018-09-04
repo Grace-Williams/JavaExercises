@@ -1,4 +1,4 @@
-package section9.arrayList;
+package section9.arrayList.lecture82;
 
 import java.util.ArrayList;
 
