@@ -1,31 +1,29 @@
-package section9.lecture77;
-
-import org.apache.tomcat.util.digester.ArrayStack;
+package section9.lecture90;
 
 import java.util.ArrayList;
 
-public class Customer {
+public class Branch {
 
     private String name;
-    private ArrayList<Double> transactions;
+    private ArrayList<Customer> customers;
 
-    public Customer(String name, double initialAmount) {
+    public Branch(String name) {
         this.name = name;
-        this.transactions = new ArrayStack<Double>();
-        addTransaction(initialAmount);
-    }
-
-    public void addTransaction(double amount){
-        this.transactions.add(amount);
+        this.customers = new ArrayList<Customer>();
     }
 
     public String getName() {
         return name;
     }
 
-    public ArrayList<Double> getTransactions() {
-        return transactions;
-    }
+ //   private boolean newCustomer(String customerName, double initialAmount){
+//        if(findCustomer(customerName) == null){
+//            this.customers.add(new Customer((customerName, initialAmount)));
+//            return true;
+//        }
+//    }
+//
+//
 }
 
 
@@ -35,7 +33,7 @@ public class Customer {
 // Each Branch should have an arrayList of Customers
 // The Customer class should have an arrayList of Doubles (transactions)
 // Customer:
-// Name, and the arrayList of doubles of transactions.
+// Name, and the arrayList of doubles.
 // Branch:
 // Need to be able to add a new customer and initial transaction amount.
 // Also needs to add additional transactions for that customer/branch
