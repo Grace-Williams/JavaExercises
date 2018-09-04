@@ -3,6 +3,7 @@ package section9.arrayList.lecture82;
 import java.util.ArrayList;
 
 public class GroceryList {
+
     private ArrayList<String> groceryList = new ArrayList<>(); // arrayList is a class and we are calling the empty constructor here ()
 
     public void addGroceryItem(String item) {
