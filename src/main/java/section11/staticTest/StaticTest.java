@@ -1,4 +1,4 @@
-package section12.staticTest;
+package section11.staticTest;
 
 public class StaticTest {
 

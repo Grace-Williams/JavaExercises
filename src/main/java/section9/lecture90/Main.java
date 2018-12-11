@@ -17,7 +17,7 @@ public class Main {
 
         bank.addCustomerTransaction("Adelaide", "Tim", 20.10);
         bank.addCustomerTransaction("Adelaide", "Tim", 90.00);
-        bank.addCustomerTransaction("Adelaide", "Tim", 37.50);
+        bank.addCustomerTransaction("Adelaide", "Tim", 23.00);
 
         bank.listCustomer("Adelaide", true);
         bank.listCustomer("Sydney", true);

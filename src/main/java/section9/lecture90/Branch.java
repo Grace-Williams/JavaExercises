@@ -28,7 +28,7 @@ public class Branch {
         return false;  // false because if customer exists, we cannot add that customer and initial amount
     }
 
-    public boolean addBranchCustomerTransaction(String customerName, double amount){
+    public boolean addBranchCustomerTransaction(String customerName, Double amount){
         Customer existingCustomer = findCustomer(customerName);
 
         if(existingCustomer != null){
