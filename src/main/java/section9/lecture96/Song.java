@@ -1,8 +1,25 @@
-package section9.linkedList;
+package section9.lecture96;
 
-public class Main {
+public class Song {
+
+    private String title;
+    private double duration;
+
+    public Song(String title, double duration) {
+        this.title = title;
+        this.duration = duration;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+//    @Override
+//    public String toString(){
+//        return this.title + ": " + this.duration;
+//    }
+
 }
-
 
 // Create a program that implements a playlist for songs
 // Create a Song class having Title and Duration for a song.
