@@ -42,7 +42,7 @@ public class Main {
     }
 
 }
-// Main, Hamburger, RollType, Meat, HealthyBurger, DeluxeBurger
+// MapProgram, Hamburger, RollType, Meat, HealthyBurger, DeluxeBurger
 // The purpose of the application is to help a fictitious company called Bill Burgers
 // to manage their process of selling hamburgers
 // Our application will help Bill to select types of burgers, some of the additional items (additions)

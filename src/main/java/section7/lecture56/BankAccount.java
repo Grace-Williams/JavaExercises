@@ -72,5 +72,5 @@ public class BankAccount {
 // 1. To allow the customer to deposit funds, this should increment the balance field
 // 2. To allow the customer to withdraw funds, this should deduct from the balance field but
 // not allow the withdrawal to complete if there are insufficient funds
-// You will want to create various code in the Main class (the one created by intelliJ) to confirm the code is working
+// You will want to create various code in the MapProgram class (the one created by intelliJ) to confirm the code is working
 // Add some System.out.println's in the 2 methods above as well
